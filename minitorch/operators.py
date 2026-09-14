@@ -27,7 +27,7 @@ def add(x: float, y: float) -> float:
 
 def neg(x: float) -> float:
     "$f(x) = -x$"
-    return -x
+    return -1.0 * x
 
 
 def lt(x: float, y: float) -> float:
@@ -37,7 +37,6 @@ def lt(x: float, y: float) -> float:
 
 def eq(x: float, y: float) -> float:
     "$f(x) =$ 1.0 if x is equal to y else 0.0"
-    # TODO: Implement for Task 0.1.
     return float(x == y)
 
 
@@ -78,7 +77,7 @@ def relu(x: float) -> float:
     """
     if x >= 0:
         return x
-    return 0
+    return 0.0
 
 
 EPS = 1e-6
@@ -113,7 +112,7 @@ def relu_back(x: float, d: float) -> float:
     r"If $f = relu$ compute $d \times f'(x)$"
     if x >= 0:
         return d
-    return 0
+    return 0.0
 
 
 # ## Task 0.3
